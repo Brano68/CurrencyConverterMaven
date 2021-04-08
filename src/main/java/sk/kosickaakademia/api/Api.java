@@ -42,7 +42,7 @@ public class Api {
     //source for inspiration
     //https://medium.com/swlh/getting-json-data-from-a-restful-api-using-java-b327aafb3751
     //method for getting string from API
-    public String getRatesFromApiServer(){
+    private String getRatesFromApiServer(){
         try {
 
             URL url = new URL("http://api.exchangeratesapi.io/v1/latest?access_key=b1eb8b41c45acff55c69f48fddefe598&format=1");
@@ -81,7 +81,7 @@ public class Api {
 
 
     //method for parsing JSON and getting onlz the rates
-    public JSONObject parseString(){
+    private JSONObject parseString(){
         String inline = getRatesFromApiServer();
         JSONParser parse = new JSONParser();
         JSONObject data_obj = null;
