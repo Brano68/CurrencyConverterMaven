@@ -1,8 +1,10 @@
 package sk.kosickaakademia.calculator;
 
+import org.json.simple.JSONObject;
 import sk.kosickaakademia.api.Api;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -40,6 +42,27 @@ public class Calculator {
     //method only for printing
     private void print(double euro, double value, double result){
         System.out.println( "Euro: " + euro + " curse: " + value + " result: " + result);
+    }
+
+    //z jsonu dostane vsetke kluce
+    public String[] getAllKey(){
+        JSONObject jsonObject = new Api().parseString();
+        Set<String> keys = jsonObject.keySet();
+        String[] array = new String[keys.size()];
+        int i = 0;
+        for(String st : keys){
+            array[i] = st;
+            i++;
+        }
+        return array;
+    }
+
+    //calculate
+    public double calculate(double euro, String key){
+        JSONObject jsonObject = new Api().parseString();
+        double course = (double)jsonObject.get(key);
+        double result = course * euro;
+        return result;
     }
 
 

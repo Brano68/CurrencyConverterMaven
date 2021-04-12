@@ -28,6 +28,10 @@ public class Main
 */
         Calculator calculator = new Calculator();
         calculator.calculate(123);
+        String[] array = calculator.getAllKey();
+        for(int i = 0; i < array.length; i++){
+            System.out.println(array[i]);
+        }
 
     }
 }

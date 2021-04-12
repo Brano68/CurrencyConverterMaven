@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="226.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.kosickaakademia.gui.IntroductionController">
+   <children>
+      <Label layoutX="182.0" layoutY="14.0" prefHeight="30.0" prefWidth="87.0" text="Exchange" textFill="#350bdd">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Line endX="211.0" layoutX="146.0" layoutY="45.0" startX="-53.0" />
+      <Button layoutX="364.0" layoutY="164.0" mnemonicParsing="false" onMouseClicked="#convert" prefHeight="48.0" prefWidth="72.0" text="Convert" textFill="#eb0a98">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="303.0" layoutY="61.0" text="Choose currency: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cBCurrency" layoutX="289.0" layoutY="80.0" onMouseClicked="#cbPress" prefWidth="150.0" />
+      <Label layoutX="30.0" layoutY="61.0" text="How much euro???">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="howMuchEuro" layoutX="11.0" layoutY="81.0" />
+      <Label layoutX="68.0" layoutY="122.0" text="Result" />
+      <TextField fx:id="result" editable="false" layoutX="10.0" layoutY="139.0" />
+   </children>
+</Pane>

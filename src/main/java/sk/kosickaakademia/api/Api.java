@@ -81,7 +81,7 @@ public class Api {
 
 
     //method for parsing JSON and getting onlz the rates
-    private JSONObject parseString(){
+    public JSONObject parseString(){
         String inline = getRatesFromApiServer();
         JSONParser parse = new JSONParser();
         JSONObject data_obj = null;
