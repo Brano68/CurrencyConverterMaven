@@ -5,10 +5,11 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import sk.kosickaakademia.calculator.Calculator;
+import sk.kosickaakademia.mongo.DatabaseMongo;
 
 import java.util.Arrays;
 
-public class IntroductionController extends Main{
+public class IntroductionController extends MainGui {
 
 
     @FXML
@@ -49,6 +50,8 @@ public class IntroductionController extends Main{
         //a na zaver vypocitame result
         if(key.equals("BTC")){
             result.setText(String.valueOf(resultt));
+            //tu urobime insert do monga
+            new DatabaseMongo().insertIntoMongo(key, howMuchNumber, resultt);
         }else{
             resultt *= 100;
             System.out.println(resultt);
@@ -57,6 +60,8 @@ public class IntroductionController extends Main{
             double result2 = number/100.00;
             System.out.println(result2);
             result.setText(String.valueOf(result2));
+            //tu urobime insert do monga
+            new DatabaseMongo().insertIntoMongo(key, howMuchNumber, result2);
         }
     }
 

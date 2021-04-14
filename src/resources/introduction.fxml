@@ -7,12 +7,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="226.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.kosickaakademia.gui.IntroductionController">
    <children>
-      <Label layoutX="182.0" layoutY="14.0" prefHeight="30.0" prefWidth="87.0" text="Exchange" textFill="#350bdd">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Line endX="211.0" layoutX="146.0" layoutY="45.0" startX="-53.0" />
+      <Line endX="211.0" layoutX="146.0" layoutY="14.0" startX="-53.0" />
       <Button layoutX="364.0" layoutY="164.0" mnemonicParsing="false" onMouseClicked="#convert" prefHeight="48.0" prefWidth="72.0" text="Convert" textFill="#eb0a98">
          <font>
             <Font size="15.0" />
