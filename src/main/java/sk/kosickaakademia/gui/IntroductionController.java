@@ -1,17 +1,24 @@
 package sk.kosickaakademia.gui;
 
+import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.util.Duration;
 import sk.kosickaakademia.calculator.Calculator;
 import sk.kosickaakademia.mongo.DatabaseMongo;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Arrays;
 
 public class IntroductionController extends MainGui {
 
-
+    @FXML
+    private ImageView idPic;
     @FXML
     private TextField result;
     @FXML
@@ -19,6 +26,17 @@ public class IntroductionController extends MainGui {
     @FXML
     private ComboBox cBCurrency;
 
+    public IntroductionController() throws FileNotFoundException {
+        //nastavujem v controller aby sa spustil o 0,01s neskor a nastavil obrazok
+        //lepsie bz bolo pouzit riesenie ako pri chat
+        //ze si popytam ten
+        PauseTransition pause = new PauseTransition(Duration.seconds(0.01));
+        String path1 = "src/main/pictureintroduction/moneyy.jpg";
+        FileInputStream inputstream1 = new FileInputStream(path1);
+        Image image1 = new Image(inputstream1);
+        pause.setOnFinished(event -> idPic.setImage(image1));
+        pause.play();
+    }
 
     @FXML
     private void cbPress(MouseEvent mouseEvent) {

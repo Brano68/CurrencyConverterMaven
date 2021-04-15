@@ -9,6 +9,8 @@ import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.UpdateResult;
 import org.bson.Document;
 
+import java.util.Date;
+
 
 public class DatabaseMongo {
 
@@ -19,8 +21,10 @@ public class DatabaseMongo {
         MongoDatabase database = mongo.getDatabase("Currency");
         //vytvorenie kolekcie
         //database.createCollection("allRecords");
-
+        Date date = new Date();
+        System.out.println(date);
         Document document = new Document();
+        document.append("Date", date.toString());
         document.append("Currency", key);
         document.append("HowMuchEuro", value);
         document.append("Result", result);

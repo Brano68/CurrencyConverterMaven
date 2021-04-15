@@ -40,7 +40,6 @@ public class MainGui extends Application {
 
         Parent root=FXMLLoader.load(getClass().getClassLoader().getResource("introduction.fxml"));
         primaryStage.setTitle("Exchange");
-
         final Group root1 = new Group(p2, root);
 
         primaryStage.setScene(new Scene(root1, 450, 300));

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="226.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.kosickaakademia.gui.IntroductionController">
    <children>
+      <ImageView fx:id="idPic" fitHeight="117.0" fitWidth="138.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" />
       <Line endX="211.0" layoutX="146.0" layoutY="14.0" startX="-53.0" />
       <Button layoutX="364.0" layoutY="164.0" mnemonicParsing="false" onMouseClicked="#convert" prefHeight="48.0" prefWidth="72.0" text="Convert" textFill="#eb0a98">
          <font>
@@ -25,7 +27,13 @@
          </font>
       </Label>
       <TextField fx:id="howMuchEuro" layoutX="11.0" layoutY="81.0" />
-      <Label layoutX="68.0" layoutY="122.0" text="Result" />
-      <TextField fx:id="result" editable="false" layoutX="10.0" layoutY="139.0" />
+      <Label layoutX="196.0" layoutY="113.0" text="Result" textFill="#4a12d7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <TextField fx:id="result" alignment="CENTER" editable="false" layoutX="136.0" layoutY="152.0" prefHeight="48.0" prefWidth="178.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
    </children>
 </Pane>
